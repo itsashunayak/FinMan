@@ -25,6 +25,7 @@ function App() {
           <Route path="/user" element={<AdminHome />} />
           <Route path="/reset" element={<Reset/>}/>
           <Route path="/AddExpense" element={<AddExpense/>}/>
+          <Route path="/EditExpense" element={<EditExpense/>}/>
         </Routes>
         {/* <ImageUpload/> */}
       </div>
