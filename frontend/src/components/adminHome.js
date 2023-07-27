@@ -1,5 +1,5 @@
 import React, {useEffect, useState } from "react";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import {  faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPaginate from 'react-paginate';
 import { useRef } from "react";
@@ -16,6 +16,11 @@ export default function AdminHome({ userData }) {
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
     let path = `/AddExpense`; 
+    navigate(path);
+  }
+
+  const routeChange2 = () =>{ 
+    let path = `/EditExpense`; 
     navigate(path);
   }
 
@@ -114,6 +119,7 @@ export default function AdminHome({ userData }) {
             <th>Date of Expense</th>
             <th>Expense</th>
             <th>Delete Expense</th>
+            <th>Edit Expense</th>
           </tr>
      
           {data.map((i) => {
@@ -128,8 +134,10 @@ export default function AdminHome({ userData }) {
                     icon={faTrash}
                     onClick={() => deleteUser(i._id)}
                   />
-
                 </td>
+                <td><button class="bg-grey hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            onClick={routeChange2}>
+                    Edit Expense</button></td>
               </tr>
             );
           })}
