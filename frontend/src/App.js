@@ -8,6 +8,7 @@ import SignUp from "./components/signup_component";
 import Reset from "./components/reset";
 import AdminHome from "./components/adminHome";
 import AddExpense from "./components/addExpense";
+import EditExpense from "./components/editExpense";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
