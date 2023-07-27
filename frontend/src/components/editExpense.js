@@ -1,6 +1,6 @@
 import React, {useState } from "react";
 
-export default function AddExpense() {
+export default function EditExpense() {
     const [expname, setExpName] = useState("");
     const [category, setCategory] = useState("");
     const [doe, setDoe] = useState("");
